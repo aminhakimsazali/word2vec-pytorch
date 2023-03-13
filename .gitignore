@@ -1,4 +1,4 @@
-data/
+data/WikiText103/
 .data/
 .ipynb_checkpoints/
 __pycache__/
