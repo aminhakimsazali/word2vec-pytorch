@@ -1,0 +1,16 @@
+model_name: cbow
+
+dataset: WikiText103
+data_dir: data/
+train_batch_size: 24
+val_batch_size: 24
+shuffle: True
+
+optimizer: Adam
+learning_rate: 0.025
+epochs: 5
+train_steps: 
+val_steps: 
+
+checkpoint_frequency: 
+model_dir: weights/cbow_WikiText103

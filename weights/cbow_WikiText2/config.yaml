@@ -7,7 +7,7 @@ model_dir: weights/cbow_WikiText2
 model_name: cbow
 optimizer: Adam
 shuffle: true
-train_batch_size: 96
+train_batch_size: 24
 train_steps: null
-val_batch_size: 96
+val_batch_size: 24
 val_steps: null
