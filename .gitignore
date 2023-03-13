@@ -2,3 +2,4 @@ data/WikiText103/
 .data/
 .ipynb_checkpoints/
 __pycache__/
+weights/cbow_WikiText103/
