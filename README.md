@@ -71,6 +71,10 @@ Difference with the original paper:
 python3 train.py --config config.yaml
 ```
 
+```
+python3 configV2.py --config config03.yaml 2>&1 | tee config03.logs
+```
+
 Before running the command, change the training parameters in the config.yaml, most important:
 
 - model_name ("skipgram", "cbow")
