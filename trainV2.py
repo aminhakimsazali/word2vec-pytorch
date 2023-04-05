@@ -81,10 +81,16 @@ def get_dataloader_and_vocab_malay_dataset(
 def train(config):
     os.makedirs(config["model_dir"])
     #read the data and combine column Target and Source into 1 Pandas Series
-    df = pd.read_excel("data/malaysia-kini/06_MalaysiaKini & Awani Articles 2022.xlsx")
-    all_data = df['Target'].tolist()
-    all_data.extend( df['Source'].tolist())
+    # df = pd.read_excel("data/malaysia-kini/06_MalaysiaKini & Awani Articles 2022.xlsx")
+    df = pd.read_excel("data/malaysia-kini/07_MalaysiaKini & Awani Articles 2022 + OSCAR.xlsx")
+    df.columns = ['Text']
+
+    # all_data = df['Target'].tolist()
+    all_data = df['Text'].tolist()
+    # all_data.extend( df['Source'].tolist())
     dfSeries = pd.Series(all_data)
+
+    dfSeries = dfSeries[dfSeries.str.len() > 3]
     #preprocessing to drop NA and duplications row
     dfSeries.drop_duplicates(inplace=True)
     dfSeries.dropna(inplace=True)
